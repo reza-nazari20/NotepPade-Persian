@@ -84,6 +84,7 @@
             دربارهماToolStripMenuItem = new ToolStripMenuItem();
             saveFileDialog1 = new SaveFileDialog();
             openFileDialog1 = new OpenFileDialog();
+            fontDialog1 = new FontDialog();
             pall.SuspendLayout();
             pfil.SuspendLayout();
             pbut.SuspendLayout();
@@ -100,28 +101,29 @@
             pall.Controls.Add(ptop);
             pall.Dock = DockStyle.Fill;
             pall.Location = new Point(0, 0);
-            pall.Margin = new Padding(5, 4, 5, 4);
+            pall.Margin = new Padding(5, 5, 5, 5);
             pall.Name = "pall";
-            pall.Size = new Size(697, 595);
+            pall.Size = new Size(751, 749);
             pall.TabIndex = 0;
             // 
             // pfil
             // 
             pfil.Controls.Add(richText);
             pfil.Dock = DockStyle.Fill;
-            pfil.Location = new Point(0, 58);
-            pfil.Margin = new Padding(5, 4, 5, 4);
+            pfil.Location = new Point(0, 73);
+            pfil.Margin = new Padding(5, 5, 5, 5);
             pfil.Name = "pfil";
-            pfil.Size = new Size(697, 512);
+            pfil.Size = new Size(751, 645);
             pfil.TabIndex = 2;
             // 
             // richText
             // 
             richText.Dock = DockStyle.Fill;
+            richText.Font = new Font("B Zar", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 178);
             richText.Location = new Point(0, 0);
-            richText.Margin = new Padding(5, 4, 5, 4);
+            richText.Margin = new Padding(5, 5, 5, 5);
             richText.Name = "richText";
-            richText.Size = new Size(697, 512);
+            richText.Size = new Size(751, 645);
             richText.TabIndex = 0;
             richText.Text = "";
             richText.TextChanged += richText_TextChanged;
@@ -130,20 +132,20 @@
             // 
             pbut.Controls.Add(statusStrip1);
             pbut.Dock = DockStyle.Bottom;
-            pbut.Location = new Point(0, 570);
-            pbut.Margin = new Padding(5, 4, 5, 4);
+            pbut.Location = new Point(0, 718);
+            pbut.Margin = new Padding(5, 5, 5, 5);
             pbut.Name = "pbut";
-            pbut.Size = new Size(697, 25);
+            pbut.Size = new Size(751, 31);
             pbut.TabIndex = 1;
             // 
             // statusStrip1
             // 
             statusStrip1.ImageScalingSize = new Size(20, 20);
             statusStrip1.Items.AddRange(new ToolStripItem[] { toolStripStatusLabel1, lblchar, toolStripStatusLabel2, lblword });
-            statusStrip1.Location = new Point(0, -1);
+            statusStrip1.Location = new Point(0, 5);
             statusStrip1.Name = "statusStrip1";
-            statusStrip1.Padding = new Padding(24, 0, 1, 0);
-            statusStrip1.Size = new Size(697, 26);
+            statusStrip1.Padding = new Padding(26, 0, 1, 0);
+            statusStrip1.Size = new Size(751, 26);
             statusStrip1.TabIndex = 0;
             statusStrip1.Text = "statusStrip1";
             // 
@@ -178,18 +180,18 @@
             ptop.Controls.Add(menuStrip1);
             ptop.Dock = DockStyle.Top;
             ptop.Location = new Point(0, 0);
-            ptop.Margin = new Padding(5, 4, 5, 4);
+            ptop.Margin = new Padding(5, 5, 5, 5);
             ptop.Name = "ptop";
-            ptop.Size = new Size(697, 58);
+            ptop.Size = new Size(751, 73);
             ptop.TabIndex = 0;
             // 
             // toolStrip1
             // 
             toolStrip1.ImageScalingSize = new Size(20, 20);
             toolStrip1.Items.AddRange(new ToolStripItem[] { tlsCopy, tlsPaste, tlsCut, toolStripSeparator6, tlsUndo, toolStripSeparator7, tlsSub, tlsSearch, toolStripComboBox1, toolStripSeparator8, tlsPrint });
-            toolStrip1.Location = new Point(0, 28);
+            toolStrip1.Location = new Point(0, 30);
             toolStrip1.Name = "toolStrip1";
-            toolStrip1.Size = new Size(697, 28);
+            toolStrip1.Size = new Size(751, 28);
             toolStrip1.TabIndex = 1;
             toolStrip1.Text = "toolStrip1";
             // 
@@ -260,7 +262,7 @@
             // toolStripComboBox1
             // 
             toolStripComboBox1.Name = "toolStripComboBox1";
-            toolStripComboBox1.Size = new Size(194, 28);
+            toolStripComboBox1.Size = new Size(209, 28);
             // 
             // toolStripSeparator8
             // 
@@ -282,8 +284,8 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { فایلToolStripMenuItem, ویرایToolStripMenuItem, قالببندیToolStripMenuItem, نماToolStripMenuItem, راهنماToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Padding = new Padding(11, 2, 0, 2);
-            menuStrip1.Size = new Size(697, 28);
+            menuStrip1.Padding = new Padding(12, 3, 0, 3);
+            menuStrip1.Size = new Size(751, 30);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -463,8 +465,9 @@
             فونتToolStripMenuItem.Image = Properties.Resources.icons8_font_48;
             فونتToolStripMenuItem.Name = "فونتToolStripMenuItem";
             فونتToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.Shift | Keys.F;
-            فونتToolStripMenuItem.Size = new Size(216, 26);
+            فونتToolStripMenuItem.Size = new Size(224, 26);
             فونتToolStripMenuItem.Text = "فونت";
+            فونتToolStripMenuItem.Click += فونتToolStripMenuItem_Click;
             // 
             // نماToolStripMenuItem
             // 
@@ -523,14 +526,14 @@
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(13F, 31F);
+            AutoScaleDimensions = new SizeF(14F, 39F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(697, 595);
+            ClientSize = new Size(751, 749);
             Controls.Add(pall);
-            Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Font = new Font("B Zar", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 178);
             Icon = (Icon)resources.GetObject("$this.Icon");
             MainMenuStrip = menuStrip1;
-            Margin = new Padding(5, 4, 5, 4);
+            Margin = new Padding(5, 5, 5, 5);
             Name = "Form1";
             RightToLeft = RightToLeft.Yes;
             RightToLeftLayout = true;
@@ -608,5 +611,6 @@
         private RichTextBox richText;
         private SaveFileDialog saveFileDialog1;
         private OpenFileDialog openFileDialog1;
+        private FontDialog fontDialog1;
     }
 }

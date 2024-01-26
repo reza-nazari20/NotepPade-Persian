@@ -114,5 +114,11 @@ namespace NotePade_Persian
                 pathsave = saveFileDialog1.FileName;
             }
         }
+
+        private void فونتToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fontDialog1.ShowDialog();
+            richText.Font = fontDialog1.Font;    
+        }
     }
 }
