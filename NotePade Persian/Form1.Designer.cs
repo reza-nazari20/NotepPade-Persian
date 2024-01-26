@@ -77,8 +77,8 @@
             قالببندیToolStripMenuItem = new ToolStripMenuItem();
             فونتToolStripMenuItem = new ToolStripMenuItem();
             نماToolStripMenuItem = new ToolStripMenuItem();
-            نواروضعیتToolStripMenuItem = new ToolStripMenuItem();
-            جعبهابزارToolStripMenuItem = new ToolStripMenuItem();
+            tlsStatusBar = new ToolStripMenuItem();
+            tlsToolBox = new ToolStripMenuItem();
             راهنماToolStripMenuItem = new ToolStripMenuItem();
             راهنمایاستفادهازبرنامهToolStripMenuItem = new ToolStripMenuItem();
             دربارهماToolStripMenuItem = new ToolStripMenuItem();
@@ -110,10 +110,10 @@
             // 
             pfil.Controls.Add(richText);
             pfil.Dock = DockStyle.Fill;
-            pfil.Location = new Point(0, 73);
+            pfil.Location = new Point(0, 63);
             pfil.Margin = new Padding(5);
             pfil.Name = "pfil";
-            pfil.Size = new Size(751, 475);
+            pfil.Size = new Size(751, 485);
             pfil.TabIndex = 2;
             // 
             // richText
@@ -123,7 +123,7 @@
             richText.Location = new Point(0, 0);
             richText.Margin = new Padding(5);
             richText.Name = "richText";
-            richText.Size = new Size(751, 475);
+            richText.Size = new Size(751, 485);
             richText.TabIndex = 0;
             richText.Text = "";
             richText.TextChanged += richText_TextChanged;
@@ -182,7 +182,7 @@
             ptop.Location = new Point(0, 0);
             ptop.Margin = new Padding(5);
             ptop.Name = "ptop";
-            ptop.Size = new Size(751, 73);
+            ptop.Size = new Size(751, 63);
             ptop.TabIndex = 0;
             // 
             // toolStrip1
@@ -472,26 +472,28 @@
             // 
             // نماToolStripMenuItem
             // 
-            نماToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { نواروضعیتToolStripMenuItem, جعبهابزارToolStripMenuItem });
+            نماToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { tlsStatusBar, tlsToolBox });
             نماToolStripMenuItem.Name = "نماToolStripMenuItem";
             نماToolStripMenuItem.Size = new Size(41, 24);
             نماToolStripMenuItem.Text = "نما";
             // 
-            // نواروضعیتToolStripMenuItem
+            // tlsStatusBar
             // 
-            نواروضعیتToolStripMenuItem.Checked = true;
-            نواروضعیتToolStripMenuItem.CheckState = CheckState.Checked;
-            نواروضعیتToolStripMenuItem.Name = "نواروضعیتToolStripMenuItem";
-            نواروضعیتToolStripMenuItem.Size = new Size(170, 26);
-            نواروضعیتToolStripMenuItem.Text = "نوار وضعیت";
+            tlsStatusBar.Checked = true;
+            tlsStatusBar.CheckState = CheckState.Checked;
+            tlsStatusBar.Name = "tlsStatusBar";
+            tlsStatusBar.Size = new Size(224, 26);
+            tlsStatusBar.Text = "نوار وضعیت";
+            tlsStatusBar.Click += tlsStatusBar_Click;
             // 
-            // جعبهابزارToolStripMenuItem
+            // tlsToolBox
             // 
-            جعبهابزارToolStripMenuItem.Checked = true;
-            جعبهابزارToolStripMenuItem.CheckState = CheckState.Checked;
-            جعبهابزارToolStripMenuItem.Name = "جعبهابزارToolStripMenuItem";
-            جعبهابزارToolStripMenuItem.Size = new Size(170, 26);
-            جعبهابزارToolStripMenuItem.Text = "جعبه ابزار";
+            tlsToolBox.Checked = true;
+            tlsToolBox.CheckState = CheckState.Checked;
+            tlsToolBox.Name = "tlsToolBox";
+            tlsToolBox.Size = new Size(224, 26);
+            tlsToolBox.Text = "جعبه ابزار";
+            tlsToolBox.Click += tlsToolBox_Click;
             // 
             // راهنماToolStripMenuItem
             // 
@@ -593,8 +595,8 @@
         private ToolStripMenuItem قالببندیToolStripMenuItem;
         private ToolStripMenuItem فونتToolStripMenuItem;
         private ToolStripMenuItem نماToolStripMenuItem;
-        private ToolStripMenuItem نواروضعیتToolStripMenuItem;
-        private ToolStripMenuItem جعبهابزارToolStripMenuItem;
+        private ToolStripMenuItem tlsStatusBar;
+        private ToolStripMenuItem tlsToolBox;
         private ToolStripMenuItem راهنماToolStripMenuItem;
         private ToolStripMenuItem راهنمایاستفادهازبرنامهToolStripMenuItem;
         private ToolStripMenuItem دربارهماToolStripMenuItem;

@@ -143,9 +143,21 @@ namespace NotePade_Persian
                                 sw.Write(richText.Text);
                             }
                         }
-                        break;  
+                        break;
                 }
             }
+        }
+
+        private void tlsStatusBar_Click(object sender, EventArgs e)
+        {
+            tlsStatusBar.Checked = !tlsStatusBar.Checked;
+            statusStrip1.Visible = !statusStrip1.Visible;
+        }
+
+        private void tlsToolBox_Click(object sender, EventArgs e)
+        {
+            tlsToolBox.Checked = !tlsToolBox.Checked;
+            toolStrip1.Visible = !toolStrip1.Visible;
         }
     }
 }
