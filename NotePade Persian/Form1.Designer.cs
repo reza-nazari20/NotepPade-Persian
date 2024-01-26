@@ -54,7 +54,7 @@
             menuStrip1 = new MenuStrip();
             فایلToolStripMenuItem = new ToolStripMenuItem();
             tsmNewNote = new ToolStripMenuItem();
-            بازکردنسندToolStripMenuItem = new ToolStripMenuItem();
+            tlmOpen = new ToolStripMenuItem();
             بازکردنپنجرهجدیدToolStripMenuItem = new ToolStripMenuItem();
             toolStripSeparator1 = new ToolStripSeparator();
             ذخیرهToolStripMenuItem = new ToolStripMenuItem();
@@ -83,6 +83,7 @@
             راهنمایاستفادهازبرنامهToolStripMenuItem = new ToolStripMenuItem();
             دربارهماToolStripMenuItem = new ToolStripMenuItem();
             saveFileDialog1 = new SaveFileDialog();
+            openFileDialog1 = new OpenFileDialog();
             pall.SuspendLayout();
             pfil.SuspendLayout();
             pbut.SuspendLayout();
@@ -108,10 +109,10 @@
             // 
             pfil.Controls.Add(richText);
             pfil.Dock = DockStyle.Fill;
-            pfil.Location = new Point(0, 81);
+            pfil.Location = new Point(0, 58);
             pfil.Margin = new Padding(5, 4, 5, 4);
             pfil.Name = "pfil";
-            pfil.Size = new Size(697, 471);
+            pfil.Size = new Size(697, 512);
             pfil.TabIndex = 2;
             // 
             // richText
@@ -120,7 +121,7 @@
             richText.Location = new Point(0, 0);
             richText.Margin = new Padding(5, 4, 5, 4);
             richText.Name = "richText";
-            richText.Size = new Size(697, 471);
+            richText.Size = new Size(697, 512);
             richText.TabIndex = 0;
             richText.Text = "";
             richText.TextChanged += richText_TextChanged;
@@ -129,17 +130,17 @@
             // 
             pbut.Controls.Add(statusStrip1);
             pbut.Dock = DockStyle.Bottom;
-            pbut.Location = new Point(0, 552);
+            pbut.Location = new Point(0, 570);
             pbut.Margin = new Padding(5, 4, 5, 4);
             pbut.Name = "pbut";
-            pbut.Size = new Size(697, 43);
+            pbut.Size = new Size(697, 25);
             pbut.TabIndex = 1;
             // 
             // statusStrip1
             // 
             statusStrip1.ImageScalingSize = new Size(20, 20);
             statusStrip1.Items.AddRange(new ToolStripItem[] { toolStripStatusLabel1, lblchar, toolStripStatusLabel2, lblword });
-            statusStrip1.Location = new Point(0, 17);
+            statusStrip1.Location = new Point(0, -1);
             statusStrip1.Name = "statusStrip1";
             statusStrip1.Padding = new Padding(24, 0, 1, 0);
             statusStrip1.Size = new Size(697, 26);
@@ -179,7 +180,7 @@
             ptop.Location = new Point(0, 0);
             ptop.Margin = new Padding(5, 4, 5, 4);
             ptop.Name = "ptop";
-            ptop.Size = new Size(697, 81);
+            ptop.Size = new Size(697, 58);
             ptop.TabIndex = 0;
             // 
             // toolStrip1
@@ -288,7 +289,7 @@
             // 
             // فایلToolStripMenuItem
             // 
-            فایلToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { tsmNewNote, بازکردنسندToolStripMenuItem, بازکردنپنجرهجدیدToolStripMenuItem, toolStripSeparator1, ذخیرهToolStripMenuItem, ذخیرهدرToolStripMenuItem, toolStripSeparator2, چاپToolStripMenuItem, toolStripSeparator3, خروجازبرنامهToolStripMenuItem });
+            فایلToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { tsmNewNote, tlmOpen, بازکردنپنجرهجدیدToolStripMenuItem, toolStripSeparator1, ذخیرهToolStripMenuItem, ذخیرهدرToolStripMenuItem, toolStripSeparator2, چاپToolStripMenuItem, toolStripSeparator3, خروجازبرنامهToolStripMenuItem });
             فایلToolStripMenuItem.Name = "فایلToolStripMenuItem";
             فایلToolStripMenuItem.Size = new Size(50, 24);
             فایلToolStripMenuItem.Text = "فایل";
@@ -302,13 +303,14 @@
             tsmNewNote.Text = "سند جدید";
             tsmNewNote.Click += tsmNewNote_Click;
             // 
-            // بازکردنسندToolStripMenuItem
+            // tlmOpen
             // 
-            بازکردنسندToolStripMenuItem.Image = Properties.Resources.icons8_opened_folder_40;
-            بازکردنسندToolStripMenuItem.Name = "بازکردنسندToolStripMenuItem";
-            بازکردنسندToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.O;
-            بازکردنسندToolStripMenuItem.Size = new Size(305, 26);
-            بازکردنسندToolStripMenuItem.Text = "باز کردن سند";
+            tlmOpen.Image = Properties.Resources.icons8_opened_folder_40;
+            tlmOpen.Name = "tlmOpen";
+            tlmOpen.ShortcutKeys = Keys.Control | Keys.O;
+            tlmOpen.Size = new Size(305, 26);
+            tlmOpen.Text = "باز کردن سند";
+            tlmOpen.Click += tlmOpen_Click;
             // 
             // بازکردنپنجرهجدیدToolStripMenuItem
             // 
@@ -511,6 +513,11 @@
             saveFileDialog1.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
             saveFileDialog1.Title = "ذخیره متن";
             // 
+            // openFileDialog1
+            // 
+            openFileDialog1.FileName = "openFileDialog1";
+            openFileDialog1.Title = "باز کردن متن";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(13F, 31F);
@@ -555,7 +562,7 @@
         private ToolStripButton tlsPaste;
         private ToolStripMenuItem فایلToolStripMenuItem;
         private ToolStripMenuItem tsmNewNote;
-        private ToolStripMenuItem بازکردنسندToolStripMenuItem;
+        private ToolStripMenuItem tlmOpen;
         private ToolStripMenuItem بازکردنپنجرهجدیدToolStripMenuItem;
         private ToolStripSeparator toolStripSeparator1;
         private ToolStripMenuItem ذخیرهToolStripMenuItem;
@@ -597,5 +604,6 @@
         private ToolStripButton tlsPrint;
         private RichTextBox richText;
         private SaveFileDialog saveFileDialog1;
+        private OpenFileDialog openFileDialog1;
     }
 }

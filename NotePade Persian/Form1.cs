@@ -52,5 +52,20 @@
         {
             RichTextChange = true;
         }
+
+        private void tlmOpen_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = openFileDialog1.ShowDialog();
+
+            if (dialogResult == DialogResult.OK)
+            {
+                string textOP;
+                using (StreamReader sr = new StreamReader(openFileDialog1.FileName))
+                {
+                    textOP = sr.ReadToEnd();
+                }
+                richText.Text = textOP;
+            }
+        }
     }
 }
