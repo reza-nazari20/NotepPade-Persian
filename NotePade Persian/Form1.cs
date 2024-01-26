@@ -12,6 +12,9 @@ namespace NotePade_Persian
         //برای اینکه بفهمیم که آیا متن تغییر داشته یا نه
         bool RichTextChange = false;
 
+        //برای ذخیره کردن  متن 
+        string pathsave = "";
+
         private void toolStripStatusLabel1_Click(object sender, EventArgs e)
         {
 
@@ -74,6 +77,42 @@ namespace NotePade_Persian
         {
             string StartNew = Process.GetCurrentProcess().ProcessName;
             Process.Start(StartNew);
+        }
+
+        private void tlsSave_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(pathsave) == false)
+            {
+                using (StreamWriter sw = new StreamWriter(pathsave))
+                {
+                    sw.Write(richText.Text);
+                }
+            }
+            else
+            {
+                var ResultSave = saveFileDialog1.ShowDialog();
+                if (ResultSave == DialogResult.OK)
+                {
+                    using (StreamWriter sw = new StreamWriter(saveFileDialog1.FileName))
+                    {
+                        sw.Write(richText.Text);
+                    }
+                    pathsave = saveFileDialog1.FileName;
+                }
+            }
+        }
+
+        private void tlsSaveas_Click(object sender, EventArgs e)
+        {
+            var ResultSave = saveFileDialog1.ShowDialog();
+            if (ResultSave == DialogResult.OK)
+            {
+                using (StreamWriter sw = new StreamWriter(saveFileDialog1.FileName))
+                {
+                    sw.Write(richText.Text);
+                }
+                pathsave = saveFileDialog1.FileName;
+            }
         }
     }
 }
