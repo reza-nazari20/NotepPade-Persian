@@ -101,9 +101,9 @@
             pall.Controls.Add(ptop);
             pall.Dock = DockStyle.Fill;
             pall.Location = new Point(0, 0);
-            pall.Margin = new Padding(5, 5, 5, 5);
+            pall.Margin = new Padding(5);
             pall.Name = "pall";
-            pall.Size = new Size(751, 749);
+            pall.Size = new Size(751, 579);
             pall.TabIndex = 0;
             // 
             // pfil
@@ -111,9 +111,9 @@
             pfil.Controls.Add(richText);
             pfil.Dock = DockStyle.Fill;
             pfil.Location = new Point(0, 73);
-            pfil.Margin = new Padding(5, 5, 5, 5);
+            pfil.Margin = new Padding(5);
             pfil.Name = "pfil";
-            pfil.Size = new Size(751, 645);
+            pfil.Size = new Size(751, 475);
             pfil.TabIndex = 2;
             // 
             // richText
@@ -121,9 +121,9 @@
             richText.Dock = DockStyle.Fill;
             richText.Font = new Font("B Zar", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 178);
             richText.Location = new Point(0, 0);
-            richText.Margin = new Padding(5, 5, 5, 5);
+            richText.Margin = new Padding(5);
             richText.Name = "richText";
-            richText.Size = new Size(751, 645);
+            richText.Size = new Size(751, 475);
             richText.TabIndex = 0;
             richText.Text = "";
             richText.TextChanged += richText_TextChanged;
@@ -132,8 +132,8 @@
             // 
             pbut.Controls.Add(statusStrip1);
             pbut.Dock = DockStyle.Bottom;
-            pbut.Location = new Point(0, 718);
-            pbut.Margin = new Padding(5, 5, 5, 5);
+            pbut.Location = new Point(0, 548);
+            pbut.Margin = new Padding(5);
             pbut.Name = "pbut";
             pbut.Size = new Size(751, 31);
             pbut.TabIndex = 1;
@@ -180,7 +180,7 @@
             ptop.Controls.Add(menuStrip1);
             ptop.Dock = DockStyle.Top;
             ptop.Location = new Point(0, 0);
-            ptop.Margin = new Padding(5, 5, 5, 5);
+            ptop.Margin = new Padding(5);
             ptop.Name = "ptop";
             ptop.Size = new Size(751, 73);
             ptop.TabIndex = 0;
@@ -371,6 +371,7 @@
             tlsExit.ShortcutKeys = Keys.F4;
             tlsExit.Size = new Size(305, 26);
             tlsExit.Text = "خروج از برنامه";
+            tlsExit.Click += tlsExit_Click;
             // 
             // ویرایToolStripMenuItem
             // 
@@ -465,7 +466,7 @@
             فونتToolStripMenuItem.Image = Properties.Resources.icons8_font_48;
             فونتToolStripMenuItem.Name = "فونتToolStripMenuItem";
             فونتToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.Shift | Keys.F;
-            فونتToolStripMenuItem.Size = new Size(224, 26);
+            فونتToolStripMenuItem.Size = new Size(216, 26);
             فونتToolStripMenuItem.Text = "فونت";
             فونتToolStripMenuItem.Click += فونتToolStripMenuItem_Click;
             // 
@@ -528,17 +529,18 @@
             // 
             AutoScaleDimensions = new SizeF(14F, 39F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(751, 749);
+            ClientSize = new Size(751, 579);
             Controls.Add(pall);
             Font = new Font("B Zar", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 178);
             Icon = (Icon)resources.GetObject("$this.Icon");
             MainMenuStrip = menuStrip1;
-            Margin = new Padding(5, 5, 5, 5);
+            Margin = new Padding(5);
             Name = "Form1";
             RightToLeft = RightToLeft.Yes;
             RightToLeftLayout = true;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "نوت پد فارسی";
+            FormClosing += Form1_FormClosing;
             pall.ResumeLayout(false);
             pfil.ResumeLayout(false);
             pbut.ResumeLayout(false);

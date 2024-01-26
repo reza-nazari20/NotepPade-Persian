@@ -118,7 +118,34 @@ namespace NotePade_Persian
         private void فونتToolStripMenuItem_Click(object sender, EventArgs e)
         {
             fontDialog1.ShowDialog();
-            richText.Font = fontDialog1.Font;    
+            richText.Font = fontDialog1.Font;
+        }
+
+        private void tlsExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (RichTextChange == true)
+            {
+                DialogResult dialogResult = MessageBox.Show("تغییرات اعمال شده را میخواهید ذخیره کنید؟", "ذخیره تغییرات", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
+
+                switch (dialogResult)
+                {
+                    case DialogResult.Yes:
+                        var ResultSave = saveFileDialog1.ShowDialog();
+                        if (ResultSave == DialogResult.OK)
+                        {
+                            using (StreamWriter sw = new StreamWriter(saveFileDialog1.FileName))
+                            {
+                                sw.Write(richText.Text);
+                            }
+                        }
+                        break;  
+                }
+            }
         }
     }
 }
