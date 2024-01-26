@@ -1,0 +1,16 @@
+E:\Practice\NotePade Persian\NotePade Persian\NotePade Persian\bin\Debug\net8.0-windows\NotePade Persian.exe
+E:\Practice\NotePade Persian\NotePade Persian\NotePade Persian\bin\Debug\net8.0-windows\NotePade Persian.deps.json
+E:\Practice\NotePade Persian\NotePade Persian\NotePade Persian\bin\Debug\net8.0-windows\NotePade Persian.runtimeconfig.json
+E:\Practice\NotePade Persian\NotePade Persian\NotePade Persian\bin\Debug\net8.0-windows\NotePade Persian.dll
+E:\Practice\NotePade Persian\NotePade Persian\NotePade Persian\bin\Debug\net8.0-windows\NotePade Persian.pdb
+E:\Practice\NotePade Persian\NotePade Persian\NotePade Persian\obj\Debug\net8.0-windows\NotePade_Persian.Form1.resources
+E:\Practice\NotePade Persian\NotePade Persian\NotePade Persian\obj\Debug\net8.0-windows\NotePade Persian.csproj.GenerateResource.cache
+E:\Practice\NotePade Persian\NotePade Persian\NotePade Persian\obj\Debug\net8.0-windows\NotePade Persian.GeneratedMSBuildEditorConfig.editorconfig
+E:\Practice\NotePade Persian\NotePade Persian\NotePade Persian\obj\Debug\net8.0-windows\NotePade Persian.AssemblyInfoInputs.cache
+E:\Practice\NotePade Persian\NotePade Persian\NotePade Persian\obj\Debug\net8.0-windows\NotePade Persian.AssemblyInfo.cs
+E:\Practice\NotePade Persian\NotePade Persian\NotePade Persian\obj\Debug\net8.0-windows\NotePade Persian.csproj.CoreCompileInputs.cache
+E:\Practice\NotePade Persian\NotePade Persian\NotePade Persian\obj\Debug\net8.0-windows\NotePade Persian.dll
+E:\Practice\NotePade Persian\NotePade Persian\NotePade Persian\obj\Debug\net8.0-windows\refint\NotePade Persian.dll
+E:\Practice\NotePade Persian\NotePade Persian\NotePade Persian\obj\Debug\net8.0-windows\NotePade Persian.pdb
+E:\Practice\NotePade Persian\NotePade Persian\NotePade Persian\obj\Debug\net8.0-windows\NotePade Persian.genruntimeconfig.cache
+E:\Practice\NotePade Persian\NotePade Persian\NotePade Persian\obj\Debug\net8.0-windows\ref\NotePade Persian.dll

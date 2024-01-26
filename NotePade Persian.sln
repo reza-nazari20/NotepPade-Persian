@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34511.84
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotePade Persian", "NotePade Persian\NotePade Persian.csproj", "{22ABADAE-4282-489D-A44D-44F68D165370}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{22ABADAE-4282-489D-A44D-44F68D165370}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22ABADAE-4282-489D-A44D-44F68D165370}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22ABADAE-4282-489D-A44D-44F68D165370}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22ABADAE-4282-489D-A44D-44F68D165370}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D9AC8CF2-8481-4B97-8AFE-2A8D4E56AB0D}
+	EndGlobalSection
+EndGlobal
