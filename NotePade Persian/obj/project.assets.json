@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Practice\\NotePade Persian\\NotePade Persian\\NotePade Persian\\NotePade Persian.csproj",
+      "projectUniqueName": "E:\\Practice\\NotePade Persian\\NotepPade-Persian\\NotePade Persian\\NotePade Persian.csproj",
       "projectName": "NotePade Persian",
-      "projectPath": "E:\\Practice\\NotePade Persian\\NotePade Persian\\NotePade Persian\\NotePade Persian.csproj",
+      "projectPath": "E:\\Practice\\NotePade Persian\\NotepPade-Persian\\NotePade Persian\\NotePade Persian.csproj",
       "packagesPath": "C:\\Users\\Notebook\\.nuget\\packages\\",
-      "outputPath": "E:\\Practice\\NotePade Persian\\NotePade Persian\\NotePade Persian\\obj\\",
+      "outputPath": "E:\\Practice\\NotePade Persian\\NotepPade-Persian\\NotePade Persian\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -29,7 +29,7 @@
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net8.0-windows"
+        "net8.0-windows7.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -38,7 +38,7 @@
       },
       "frameworks": {
         "net8.0-windows7.0": {
-          "targetAlias": "net8.0-windows",
+          "targetAlias": "net8.0-windows7.0",
           "projectReferences": {}
         }
       },
@@ -50,7 +50,7 @@
     },
     "frameworks": {
       "net8.0-windows7.0": {
-        "targetAlias": "net8.0-windows",
+        "targetAlias": "net8.0-windows7.0",
         "imports": [
           "net461",
           "net462",

@@ -31,16 +31,59 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             pall = new Panel();
             pfil = new Panel();
+            richTextBox1 = new RichTextBox();
             pbut = new Panel();
             statusStrip1 = new StatusStrip();
             toolStripStatusLabel1 = new ToolStripStatusLabel();
+            lblchar = new ToolStripStatusLabel();
+            toolStripStatusLabel2 = new ToolStripStatusLabel();
+            lblword = new ToolStripStatusLabel();
             ptop = new Panel();
             toolStrip1 = new ToolStrip();
-            toolStripButton1 = new ToolStripButton();
-            toolStripButton2 = new ToolStripButton();
+            tlsCopy = new ToolStripButton();
+            tlsPaste = new ToolStripButton();
+            tlsCut = new ToolStripButton();
+            toolStripSeparator6 = new ToolStripSeparator();
+            tlsUndo = new ToolStripButton();
+            toolStripSeparator7 = new ToolStripSeparator();
+            tlsSub = new ToolStripButton();
+            tlsSearch = new ToolStripButton();
+            toolStripComboBox1 = new ToolStripComboBox();
+            toolStripSeparator8 = new ToolStripSeparator();
+            tlsPrint = new ToolStripButton();
             menuStrip1 = new MenuStrip();
             فایلToolStripMenuItem = new ToolStripMenuItem();
+            سندجدیدToolStripMenuItem = new ToolStripMenuItem();
+            بازکردنسندToolStripMenuItem = new ToolStripMenuItem();
+            بازکردنپنجرهجدیدToolStripMenuItem = new ToolStripMenuItem();
+            toolStripSeparator1 = new ToolStripSeparator();
+            ذخیرهToolStripMenuItem = new ToolStripMenuItem();
+            ذخیرهدرToolStripMenuItem = new ToolStripMenuItem();
+            toolStripSeparator2 = new ToolStripSeparator();
+            چاپToolStripMenuItem = new ToolStripMenuItem();
+            toolStripSeparator3 = new ToolStripSeparator();
+            خروجازبرنامهToolStripMenuItem = new ToolStripMenuItem();
+            ویرایToolStripMenuItem = new ToolStripMenuItem();
+            واگردToolStripMenuItem = new ToolStripMenuItem();
+            چسباندنToolStripMenuItem = new ToolStripMenuItem();
+            رونوشتToolStripMenuItem = new ToolStripMenuItem();
+            برشToolStripMenuItem = new ToolStripMenuItem();
+            toolStripSeparator4 = new ToolStripSeparator();
+            جستوجوToolStripMenuItem = new ToolStripMenuItem();
+            چایگزینیToolStripMenuItem = new ToolStripMenuItem();
+            toolStripSeparator5 = new ToolStripSeparator();
+            انتخابهمهمتنToolStripMenuItem = new ToolStripMenuItem();
+            درجتاریخToolStripMenuItem = new ToolStripMenuItem();
+            قالببندیToolStripMenuItem = new ToolStripMenuItem();
+            فونتToolStripMenuItem = new ToolStripMenuItem();
+            نماToolStripMenuItem = new ToolStripMenuItem();
+            نواروضعیتToolStripMenuItem = new ToolStripMenuItem();
+            جعبهابزارToolStripMenuItem = new ToolStripMenuItem();
+            راهنماToolStripMenuItem = new ToolStripMenuItem();
+            راهنمایاستفادهازبرنامهToolStripMenuItem = new ToolStripMenuItem();
+            دربارهماToolStripMenuItem = new ToolStripMenuItem();
             pall.SuspendLayout();
+            pfil.SuspendLayout();
             pbut.SuspendLayout();
             statusStrip1.SuspendLayout();
             ptop.SuspendLayout();
@@ -61,11 +104,21 @@
             // 
             // pfil
             // 
+            pfil.Controls.Add(richTextBox1);
             pfil.Dock = DockStyle.Fill;
             pfil.Location = new Point(0, 52);
             pfil.Name = "pfil";
             pfil.Size = new Size(646, 468);
             pfil.TabIndex = 2;
+            // 
+            // richTextBox1
+            // 
+            richTextBox1.Dock = DockStyle.Fill;
+            richTextBox1.Location = new Point(0, 0);
+            richTextBox1.Name = "richTextBox1";
+            richTextBox1.Size = new Size(646, 468);
+            richTextBox1.TabIndex = 0;
+            richTextBox1.Text = "";
             // 
             // pbut
             // 
@@ -79,7 +132,7 @@
             // statusStrip1
             // 
             statusStrip1.ImageScalingSize = new Size(20, 20);
-            statusStrip1.Items.AddRange(new ToolStripItem[] { toolStripStatusLabel1 });
+            statusStrip1.Items.AddRange(new ToolStripItem[] { toolStripStatusLabel1, lblchar, toolStripStatusLabel2, lblword });
             statusStrip1.Location = new Point(0, 2);
             statusStrip1.Name = "statusStrip1";
             statusStrip1.Size = new Size(646, 26);
@@ -89,8 +142,27 @@
             // toolStripStatusLabel1
             // 
             toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            toolStripStatusLabel1.Size = new Size(151, 20);
-            toolStripStatusLabel1.Text = "toolStripStatusLabel1";
+            toolStripStatusLabel1.Size = new Size(94, 20);
+            toolStripStatusLabel1.Text = "تعداد کاراکتر :";
+            toolStripStatusLabel1.Click += toolStripStatusLabel1_Click;
+            // 
+            // lblchar
+            // 
+            lblchar.Name = "lblchar";
+            lblchar.Size = new Size(17, 20);
+            lblchar.Text = "0";
+            // 
+            // toolStripStatusLabel2
+            // 
+            toolStripStatusLabel2.Name = "toolStripStatusLabel2";
+            toolStripStatusLabel2.Size = new Size(94, 20);
+            toolStripStatusLabel2.Text = "تعداد کلمات :";
+            // 
+            // lblword
+            // 
+            lblword.Name = "lblword";
+            lblword.Size = new Size(17, 20);
+            lblword.Text = "0";
             // 
             // ptop
             // 
@@ -105,35 +177,100 @@
             // toolStrip1
             // 
             toolStrip1.ImageScalingSize = new Size(20, 20);
-            toolStrip1.Items.AddRange(new ToolStripItem[] { toolStripButton1, toolStripButton2 });
+            toolStrip1.Items.AddRange(new ToolStripItem[] { tlsCopy, tlsPaste, tlsCut, toolStripSeparator6, tlsUndo, toolStripSeparator7, tlsSub, tlsSearch, toolStripComboBox1, toolStripSeparator8, tlsPrint });
             toolStrip1.Location = new Point(0, 28);
             toolStrip1.Name = "toolStrip1";
-            toolStrip1.Size = new Size(646, 27);
+            toolStrip1.Size = new Size(646, 28);
             toolStrip1.TabIndex = 1;
             toolStrip1.Text = "toolStrip1";
             // 
-            // toolStripButton1
+            // tlsCopy
             // 
-            toolStripButton1.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            toolStripButton1.Image = (Image)resources.GetObject("toolStripButton1.Image");
-            toolStripButton1.ImageTransparentColor = Color.Magenta;
-            toolStripButton1.Name = "toolStripButton1";
-            toolStripButton1.Size = new Size(29, 24);
-            toolStripButton1.Text = "toolStripButton1";
+            tlsCopy.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            tlsCopy.Image = Properties.Resources.icons8_copy_48;
+            tlsCopy.ImageTransparentColor = Color.Magenta;
+            tlsCopy.Name = "tlsCopy";
+            tlsCopy.Size = new Size(29, 25);
+            tlsCopy.Text = "رونوشت";
             // 
-            // toolStripButton2
+            // tlsPaste
             // 
-            toolStripButton2.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            toolStripButton2.Image = (Image)resources.GetObject("toolStripButton2.Image");
-            toolStripButton2.ImageTransparentColor = Color.Magenta;
-            toolStripButton2.Name = "toolStripButton2";
-            toolStripButton2.Size = new Size(29, 24);
-            toolStripButton2.Text = "toolStripButton2";
+            tlsPaste.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            tlsPaste.Image = Properties.Resources.icons8_paste_48;
+            tlsPaste.ImageTransparentColor = Color.Magenta;
+            tlsPaste.Name = "tlsPaste";
+            tlsPaste.Size = new Size(29, 25);
+            tlsPaste.Text = "چسباندن";
+            // 
+            // tlsCut
+            // 
+            tlsCut.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            tlsCut.Image = Properties.Resources.icons8_cut_64;
+            tlsCut.ImageTransparentColor = Color.Magenta;
+            tlsCut.Name = "tlsCut";
+            tlsCut.Size = new Size(29, 25);
+            tlsCut.Text = "بریدن";
+            // 
+            // toolStripSeparator6
+            // 
+            toolStripSeparator6.Name = "toolStripSeparator6";
+            toolStripSeparator6.Size = new Size(6, 28);
+            // 
+            // tlsUndo
+            // 
+            tlsUndo.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            tlsUndo.Image = Properties.Resources.icons8_undo_48;
+            tlsUndo.ImageTransparentColor = Color.Magenta;
+            tlsUndo.Name = "tlsUndo";
+            tlsUndo.Size = new Size(29, 25);
+            tlsUndo.Text = "واگرد";
+            // 
+            // toolStripSeparator7
+            // 
+            toolStripSeparator7.Name = "toolStripSeparator7";
+            toolStripSeparator7.Size = new Size(6, 28);
+            // 
+            // tlsSub
+            // 
+            tlsSub.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            tlsSub.Image = Properties.Resources.icons8_replacement_48;
+            tlsSub.ImageTransparentColor = Color.Magenta;
+            tlsSub.Name = "tlsSub";
+            tlsSub.Size = new Size(29, 25);
+            tlsSub.Text = "جایگزینی";
+            // 
+            // tlsSearch
+            // 
+            tlsSearch.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            tlsSearch.Image = Properties.Resources.icons8_search_48;
+            tlsSearch.ImageTransparentColor = Color.Magenta;
+            tlsSearch.Name = "tlsSearch";
+            tlsSearch.Size = new Size(29, 25);
+            tlsSearch.Text = "جستوجو";
+            // 
+            // toolStripComboBox1
+            // 
+            toolStripComboBox1.Name = "toolStripComboBox1";
+            toolStripComboBox1.Size = new Size(121, 28);
+            // 
+            // toolStripSeparator8
+            // 
+            toolStripSeparator8.Name = "toolStripSeparator8";
+            toolStripSeparator8.Size = new Size(6, 28);
+            // 
+            // tlsPrint
+            // 
+            tlsPrint.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            tlsPrint.Image = Properties.Resources.icons8_print_48;
+            tlsPrint.ImageTransparentColor = Color.Magenta;
+            tlsPrint.Name = "tlsPrint";
+            tlsPrint.Size = new Size(29, 25);
+            tlsPrint.Text = "چاپ";
             // 
             // menuStrip1
             // 
             menuStrip1.ImageScalingSize = new Size(20, 20);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { فایلToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { فایلToolStripMenuItem, ویرایToolStripMenuItem, قالببندیToolStripMenuItem, نماToolStripMenuItem, راهنماToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(646, 28);
@@ -142,9 +279,221 @@
             // 
             // فایلToolStripMenuItem
             // 
+            فایلToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { سندجدیدToolStripMenuItem, بازکردنسندToolStripMenuItem, بازکردنپنجرهجدیدToolStripMenuItem, toolStripSeparator1, ذخیرهToolStripMenuItem, ذخیرهدرToolStripMenuItem, toolStripSeparator2, چاپToolStripMenuItem, toolStripSeparator3, خروجازبرنامهToolStripMenuItem });
             فایلToolStripMenuItem.Name = "فایلToolStripMenuItem";
             فایلToolStripMenuItem.Size = new Size(50, 24);
             فایلToolStripMenuItem.Text = "فایل";
+            // 
+            // سندجدیدToolStripMenuItem
+            // 
+            سندجدیدToolStripMenuItem.Image = Properties.Resources.icons8_page_orientation_48;
+            سندجدیدToolStripMenuItem.Name = "سندجدیدToolStripMenuItem";
+            سندجدیدToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.N;
+            سندجدیدToolStripMenuItem.Size = new Size(305, 26);
+            سندجدیدToolStripMenuItem.Text = "سند جدید";
+            // 
+            // بازکردنسندToolStripMenuItem
+            // 
+            بازکردنسندToolStripMenuItem.Image = Properties.Resources.icons8_opened_folder_40;
+            بازکردنسندToolStripMenuItem.Name = "بازکردنسندToolStripMenuItem";
+            بازکردنسندToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.O;
+            بازکردنسندToolStripMenuItem.Size = new Size(305, 26);
+            بازکردنسندToolStripMenuItem.Text = "باز کردن سند";
+            // 
+            // بازکردنپنجرهجدیدToolStripMenuItem
+            // 
+            بازکردنپنجرهجدیدToolStripMenuItem.Image = Properties.Resources.icons8_new_window_64;
+            بازکردنپنجرهجدیدToolStripMenuItem.Name = "بازکردنپنجرهجدیدToolStripMenuItem";
+            بازکردنپنجرهجدیدToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.Shift | Keys.N;
+            بازکردنپنجرهجدیدToolStripMenuItem.Size = new Size(305, 26);
+            بازکردنپنجرهجدیدToolStripMenuItem.Text = "باز کردن پنجره جدید";
+            // 
+            // toolStripSeparator1
+            // 
+            toolStripSeparator1.Name = "toolStripSeparator1";
+            toolStripSeparator1.Size = new Size(302, 6);
+            // 
+            // ذخیرهToolStripMenuItem
+            // 
+            ذخیرهToolStripMenuItem.Image = Properties.Resources.icons8_save_48;
+            ذخیرهToolStripMenuItem.Name = "ذخیرهToolStripMenuItem";
+            ذخیرهToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.S;
+            ذخیرهToolStripMenuItem.Size = new Size(305, 26);
+            ذخیرهToolStripMenuItem.Text = "ذخیره";
+            // 
+            // ذخیرهدرToolStripMenuItem
+            // 
+            ذخیرهدرToolStripMenuItem.Image = Properties.Resources.icons8_save_as_64;
+            ذخیرهدرToolStripMenuItem.Name = "ذخیرهدرToolStripMenuItem";
+            ذخیرهدرToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.Shift | Keys.S;
+            ذخیرهدرToolStripMenuItem.Size = new Size(305, 26);
+            ذخیرهدرToolStripMenuItem.Text = "ذخیره در";
+            // 
+            // toolStripSeparator2
+            // 
+            toolStripSeparator2.Name = "toolStripSeparator2";
+            toolStripSeparator2.Size = new Size(302, 6);
+            // 
+            // چاپToolStripMenuItem
+            // 
+            چاپToolStripMenuItem.Image = Properties.Resources.icons8_print_48;
+            چاپToolStripMenuItem.Name = "چاپToolStripMenuItem";
+            چاپToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.P;
+            چاپToolStripMenuItem.Size = new Size(305, 26);
+            چاپToolStripMenuItem.Text = "چاپ";
+            // 
+            // toolStripSeparator3
+            // 
+            toolStripSeparator3.Name = "toolStripSeparator3";
+            toolStripSeparator3.Size = new Size(302, 6);
+            // 
+            // خروجازبرنامهToolStripMenuItem
+            // 
+            خروجازبرنامهToolStripMenuItem.Image = Properties.Resources.icons8_exit_48;
+            خروجازبرنامهToolStripMenuItem.Name = "خروجازبرنامهToolStripMenuItem";
+            خروجازبرنامهToolStripMenuItem.ShortcutKeys = Keys.F4;
+            خروجازبرنامهToolStripMenuItem.Size = new Size(305, 26);
+            خروجازبرنامهToolStripMenuItem.Text = "خروج از برنامه";
+            // 
+            // ویرایToolStripMenuItem
+            // 
+            ویرایToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { واگردToolStripMenuItem, چسباندنToolStripMenuItem, رونوشتToolStripMenuItem, برشToolStripMenuItem, toolStripSeparator4, جستوجوToolStripMenuItem, چایگزینیToolStripMenuItem, toolStripSeparator5, انتخابهمهمتنToolStripMenuItem, درجتاریخToolStripMenuItem });
+            ویرایToolStripMenuItem.Name = "ویرایToolStripMenuItem";
+            ویرایToolStripMenuItem.Size = new Size(69, 24);
+            ویرایToolStripMenuItem.Text = "ویرایش";
+            // 
+            // واگردToolStripMenuItem
+            // 
+            واگردToolStripMenuItem.Image = Properties.Resources.icons8_undo_48;
+            واگردToolStripMenuItem.Name = "واگردToolStripMenuItem";
+            واگردToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.Z;
+            واگردToolStripMenuItem.Size = new Size(244, 26);
+            واگردToolStripMenuItem.Text = "واگرد";
+            // 
+            // چسباندنToolStripMenuItem
+            // 
+            چسباندنToolStripMenuItem.Image = Properties.Resources.icons8_paste_48;
+            چسباندنToolStripMenuItem.Name = "چسباندنToolStripMenuItem";
+            چسباندنToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.V;
+            چسباندنToolStripMenuItem.Size = new Size(244, 26);
+            چسباندنToolStripMenuItem.Text = "چسباندن";
+            // 
+            // رونوشتToolStripMenuItem
+            // 
+            رونوشتToolStripMenuItem.Image = Properties.Resources.icons8_copy_48;
+            رونوشتToolStripMenuItem.Name = "رونوشتToolStripMenuItem";
+            رونوشتToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.C;
+            رونوشتToolStripMenuItem.Size = new Size(244, 26);
+            رونوشتToolStripMenuItem.Text = "رونوشت";
+            // 
+            // برشToolStripMenuItem
+            // 
+            برشToolStripMenuItem.Image = Properties.Resources.icons8_cut_64;
+            برشToolStripMenuItem.Name = "برشToolStripMenuItem";
+            برشToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.X;
+            برشToolStripMenuItem.Size = new Size(244, 26);
+            برشToolStripMenuItem.Text = "برش";
+            // 
+            // toolStripSeparator4
+            // 
+            toolStripSeparator4.Name = "toolStripSeparator4";
+            toolStripSeparator4.Size = new Size(241, 6);
+            // 
+            // جستوجوToolStripMenuItem
+            // 
+            جستوجوToolStripMenuItem.Image = Properties.Resources.icons8_search_48;
+            جستوجوToolStripMenuItem.Name = "جستوجوToolStripMenuItem";
+            جستوجوToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.F;
+            جستوجوToolStripMenuItem.Size = new Size(244, 26);
+            جستوجوToolStripMenuItem.Text = "جستوجو";
+            // 
+            // چایگزینیToolStripMenuItem
+            // 
+            چایگزینیToolStripMenuItem.Image = Properties.Resources.icons8_replacement_48;
+            چایگزینیToolStripMenuItem.Name = "چایگزینیToolStripMenuItem";
+            چایگزینیToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.H;
+            چایگزینیToolStripMenuItem.Size = new Size(244, 26);
+            چایگزینیToolStripMenuItem.Text = "جایگزینی";
+            // 
+            // toolStripSeparator5
+            // 
+            toolStripSeparator5.Name = "toolStripSeparator5";
+            toolStripSeparator5.Size = new Size(241, 6);
+            // 
+            // انتخابهمهمتنToolStripMenuItem
+            // 
+            انتخابهمهمتنToolStripMenuItem.Image = Properties.Resources.icons8_select_all_48;
+            انتخابهمهمتنToolStripMenuItem.Name = "انتخابهمهمتنToolStripMenuItem";
+            انتخابهمهمتنToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.A;
+            انتخابهمهمتنToolStripMenuItem.Size = new Size(244, 26);
+            انتخابهمهمتنToolStripMenuItem.Text = "انتخاب همه متن";
+            // 
+            // درجتاریخToolStripMenuItem
+            // 
+            درجتاریخToolStripMenuItem.Image = Properties.Resources.icons8_date_94;
+            درجتاریخToolStripMenuItem.Name = "درجتاریخToolStripMenuItem";
+            درجتاریخToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.Shift | Keys.T;
+            درجتاریخToolStripMenuItem.Size = new Size(244, 26);
+            درجتاریخToolStripMenuItem.Text = "درج تاریخ";
+            // 
+            // قالببندیToolStripMenuItem
+            // 
+            قالببندیToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { فونتToolStripMenuItem });
+            قالببندیToolStripMenuItem.Name = "قالببندیToolStripMenuItem";
+            قالببندیToolStripMenuItem.Size = new Size(87, 24);
+            قالببندیToolStripMenuItem.Text = "قالب بندی";
+            // 
+            // فونتToolStripMenuItem
+            // 
+            فونتToolStripMenuItem.Image = Properties.Resources.icons8_font_48;
+            فونتToolStripMenuItem.Name = "فونتToolStripMenuItem";
+            فونتToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.Shift | Keys.F;
+            فونتToolStripMenuItem.Size = new Size(216, 26);
+            فونتToolStripMenuItem.Text = "فونت";
+            // 
+            // نماToolStripMenuItem
+            // 
+            نماToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { نواروضعیتToolStripMenuItem, جعبهابزارToolStripMenuItem });
+            نماToolStripMenuItem.Name = "نماToolStripMenuItem";
+            نماToolStripMenuItem.Size = new Size(41, 24);
+            نماToolStripMenuItem.Text = "نما";
+            // 
+            // نواروضعیتToolStripMenuItem
+            // 
+            نواروضعیتToolStripMenuItem.Checked = true;
+            نواروضعیتToolStripMenuItem.CheckState = CheckState.Checked;
+            نواروضعیتToolStripMenuItem.Name = "نواروضعیتToolStripMenuItem";
+            نواروضعیتToolStripMenuItem.Size = new Size(170, 26);
+            نواروضعیتToolStripMenuItem.Text = "نوار وضعیت";
+            // 
+            // جعبهابزارToolStripMenuItem
+            // 
+            جعبهابزارToolStripMenuItem.Checked = true;
+            جعبهابزارToolStripMenuItem.CheckState = CheckState.Checked;
+            جعبهابزارToolStripMenuItem.Name = "جعبهابزارToolStripMenuItem";
+            جعبهابزارToolStripMenuItem.Size = new Size(170, 26);
+            جعبهابزارToolStripMenuItem.Text = "جعبه ابزار";
+            // 
+            // راهنماToolStripMenuItem
+            // 
+            راهنماToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { راهنمایاستفادهازبرنامهToolStripMenuItem, دربارهماToolStripMenuItem });
+            راهنماToolStripMenuItem.Name = "راهنماToolStripMenuItem";
+            راهنماToolStripMenuItem.Size = new Size(60, 24);
+            راهنماToolStripMenuItem.Text = "راهنما";
+            // 
+            // راهنمایاستفادهازبرنامهToolStripMenuItem
+            // 
+            راهنمایاستفادهازبرنامهToolStripMenuItem.Image = Properties.Resources.icons8_guide_64;
+            راهنمایاستفادهازبرنامهToolStripMenuItem.Name = "راهنمایاستفادهازبرنامهToolStripMenuItem";
+            راهنمایاستفادهازبرنامهToolStripMenuItem.Size = new Size(248, 26);
+            راهنمایاستفادهازبرنامهToolStripMenuItem.Text = "راهنمای استفاده از برنامه";
+            // 
+            // دربارهماToolStripMenuItem
+            // 
+            دربارهماToolStripMenuItem.Image = Properties.Resources.icons8_call_me_skin_type_1_100;
+            دربارهماToolStripMenuItem.Name = "دربارهماToolStripMenuItem";
+            دربارهماToolStripMenuItem.Size = new Size(248, 26);
+            دربارهماToolStripMenuItem.Text = "درباره ما";
             // 
             // Form1
             // 
@@ -152,12 +501,14 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(646, 548);
             Controls.Add(pall);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MainMenuStrip = menuStrip1;
             Name = "Form1";
             RightToLeft = RightToLeft.Yes;
             RightToLeftLayout = true;
             Text = "نوت پد فارسی";
             pall.ResumeLayout(false);
+            pfil.ResumeLayout(false);
             pbut.ResumeLayout(false);
             pbut.PerformLayout();
             statusStrip1.ResumeLayout(false);
@@ -181,8 +532,50 @@
         private StatusStrip statusStrip1;
         private ToolStripStatusLabel toolStripStatusLabel1;
         private ToolStrip toolStrip1;
-        private ToolStripButton toolStripButton1;
-        private ToolStripButton toolStripButton2;
+        private ToolStripButton tlsCopy;
+        private ToolStripButton tlsPaste;
         private ToolStripMenuItem فایلToolStripMenuItem;
+        private ToolStripMenuItem سندجدیدToolStripMenuItem;
+        private ToolStripMenuItem بازکردنسندToolStripMenuItem;
+        private ToolStripMenuItem بازکردنپنجرهجدیدToolStripMenuItem;
+        private ToolStripSeparator toolStripSeparator1;
+        private ToolStripMenuItem ذخیرهToolStripMenuItem;
+        private ToolStripMenuItem ذخیرهدرToolStripMenuItem;
+        private ToolStripSeparator toolStripSeparator2;
+        private ToolStripMenuItem چاپToolStripMenuItem;
+        private ToolStripSeparator toolStripSeparator3;
+        private ToolStripMenuItem خروجازبرنامهToolStripMenuItem;
+        private ToolStripMenuItem ویرایToolStripMenuItem;
+        private ToolStripMenuItem واگردToolStripMenuItem;
+        private ToolStripMenuItem چسباندنToolStripMenuItem;
+        private ToolStripMenuItem رونوشتToolStripMenuItem;
+        private ToolStripMenuItem برشToolStripMenuItem;
+        private ToolStripSeparator toolStripSeparator4;
+        private ToolStripMenuItem جستوجوToolStripMenuItem;
+        private ToolStripMenuItem چایگزینیToolStripMenuItem;
+        private ToolStripSeparator toolStripSeparator5;
+        private ToolStripMenuItem انتخابهمهمتنToolStripMenuItem;
+        private ToolStripMenuItem درجتاریخToolStripMenuItem;
+        private ToolStripMenuItem قالببندیToolStripMenuItem;
+        private ToolStripMenuItem فونتToolStripMenuItem;
+        private ToolStripMenuItem نماToolStripMenuItem;
+        private ToolStripMenuItem نواروضعیتToolStripMenuItem;
+        private ToolStripMenuItem جعبهابزارToolStripMenuItem;
+        private ToolStripMenuItem راهنماToolStripMenuItem;
+        private ToolStripMenuItem راهنمایاستفادهازبرنامهToolStripMenuItem;
+        private ToolStripMenuItem دربارهماToolStripMenuItem;
+        private ToolStripStatusLabel lblchar;
+        private ToolStripStatusLabel toolStripStatusLabel2;
+        private ToolStripStatusLabel lblword;
+        private ToolStripButton tlsCut;
+        private ToolStripSeparator toolStripSeparator6;
+        private ToolStripButton tlsUndo;
+        private ToolStripSeparator toolStripSeparator7;
+        private ToolStripButton tlsSub;
+        private ToolStripButton tlsSearch;
+        private ToolStripComboBox toolStripComboBox1;
+        private ToolStripSeparator toolStripSeparator8;
+        private ToolStripButton tlsPrint;
+        private RichTextBox richTextBox1;
     }
 }

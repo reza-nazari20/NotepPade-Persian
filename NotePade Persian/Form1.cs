@@ -6,5 +6,10 @@ namespace NotePade_Persian
         {
             InitializeComponent();
         }
+
+        private void toolStripStatusLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

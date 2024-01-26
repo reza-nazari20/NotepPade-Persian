@@ -1,0 +1,18 @@
+E:\Practice\NotePade Persian\NotepPade-Persian\NotePade Persian\bin\Debug\net8.0-windows7.0\NotePade Persian.exe
+E:\Practice\NotePade Persian\NotepPade-Persian\NotePade Persian\bin\Debug\net8.0-windows7.0\NotePade Persian.deps.json
+E:\Practice\NotePade Persian\NotepPade-Persian\NotePade Persian\bin\Debug\net8.0-windows7.0\NotePade Persian.runtimeconfig.json
+E:\Practice\NotePade Persian\NotepPade-Persian\NotePade Persian\bin\Debug\net8.0-windows7.0\NotePade Persian.dll
+E:\Practice\NotePade Persian\NotepPade-Persian\NotePade Persian\bin\Debug\net8.0-windows7.0\NotePade Persian.pdb
+E:\Practice\NotePade Persian\NotepPade-Persian\NotePade Persian\obj\Debug\net8.0-windows7.0\NotePade_Persian.Form1.resources
+E:\Practice\NotePade Persian\NotepPade-Persian\NotePade Persian\obj\Debug\net8.0-windows7.0\NotePade_Persian.Properties.Resources.resources
+E:\Practice\NotePade Persian\NotepPade-Persian\NotePade Persian\obj\Debug\net8.0-windows7.0\NotePade Persian.csproj.GenerateResource.cache
+E:\Practice\NotePade Persian\NotepPade-Persian\NotePade Persian\obj\Debug\net8.0-windows7.0\NotePade Persian.GeneratedMSBuildEditorConfig.editorconfig
+E:\Practice\NotePade Persian\NotepPade-Persian\NotePade Persian\obj\Debug\net8.0-windows7.0\NotePade Persian.AssemblyInfoInputs.cache
+E:\Practice\NotePade Persian\NotepPade-Persian\NotePade Persian\obj\Debug\net8.0-windows7.0\NotePade Persian.AssemblyInfo.cs
+E:\Practice\NotePade Persian\NotepPade-Persian\NotePade Persian\obj\Debug\net8.0-windows7.0\NotePade Persian.csproj.CoreCompileInputs.cache
+E:\Practice\NotePade Persian\NotepPade-Persian\NotePade Persian\obj\Debug\net8.0-windows7.0\NotePade Persian.sourcelink.json
+E:\Practice\NotePade Persian\NotepPade-Persian\NotePade Persian\obj\Debug\net8.0-windows7.0\NotePade Persian.dll
+E:\Practice\NotePade Persian\NotepPade-Persian\NotePade Persian\obj\Debug\net8.0-windows7.0\refint\NotePade Persian.dll
+E:\Practice\NotePade Persian\NotepPade-Persian\NotePade Persian\obj\Debug\net8.0-windows7.0\NotePade Persian.pdb
+E:\Practice\NotePade Persian\NotepPade-Persian\NotePade Persian\obj\Debug\net8.0-windows7.0\NotePade Persian.genruntimeconfig.cache
+E:\Practice\NotePade Persian\NotepPade-Persian\NotePade Persian\obj\Debug\net8.0-windows7.0\ref\NotePade Persian.dll
