@@ -1,4 +1,6 @@
-﻿namespace NotePade_Persian
+﻿using System.Diagnostics;
+
+namespace NotePade_Persian
 {
     public partial class Form1 : Form
     {
@@ -66,6 +68,12 @@
                 }
                 richText.Text = textOP;
             }
+        }
+
+        private void tlsOpenNew_Click(object sender, EventArgs e)
+        {
+            string StartNew = Process.GetCurrentProcess().ProcessName;
+            Process.Start(StartNew);
         }
     }
 }

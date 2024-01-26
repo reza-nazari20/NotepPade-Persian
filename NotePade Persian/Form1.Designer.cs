@@ -55,7 +55,7 @@
             فایلToolStripMenuItem = new ToolStripMenuItem();
             tsmNewNote = new ToolStripMenuItem();
             tlmOpen = new ToolStripMenuItem();
-            بازکردنپنجرهجدیدToolStripMenuItem = new ToolStripMenuItem();
+            tlsOpenNew = new ToolStripMenuItem();
             toolStripSeparator1 = new ToolStripSeparator();
             ذخیرهToolStripMenuItem = new ToolStripMenuItem();
             ذخیرهدرToolStripMenuItem = new ToolStripMenuItem();
@@ -289,7 +289,7 @@
             // 
             // فایلToolStripMenuItem
             // 
-            فایلToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { tsmNewNote, tlmOpen, بازکردنپنجرهجدیدToolStripMenuItem, toolStripSeparator1, ذخیرهToolStripMenuItem, ذخیرهدرToolStripMenuItem, toolStripSeparator2, چاپToolStripMenuItem, toolStripSeparator3, خروجازبرنامهToolStripMenuItem });
+            فایلToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { tsmNewNote, tlmOpen, tlsOpenNew, toolStripSeparator1, ذخیرهToolStripMenuItem, ذخیرهدرToolStripMenuItem, toolStripSeparator2, چاپToolStripMenuItem, toolStripSeparator3, خروجازبرنامهToolStripMenuItem });
             فایلToolStripMenuItem.Name = "فایلToolStripMenuItem";
             فایلToolStripMenuItem.Size = new Size(50, 24);
             فایلToolStripMenuItem.Text = "فایل";
@@ -312,13 +312,14 @@
             tlmOpen.Text = "باز کردن سند";
             tlmOpen.Click += tlmOpen_Click;
             // 
-            // بازکردنپنجرهجدیدToolStripMenuItem
+            // tlsOpenNew
             // 
-            بازکردنپنجرهجدیدToolStripMenuItem.Image = Properties.Resources.icons8_new_window_64;
-            بازکردنپنجرهجدیدToolStripMenuItem.Name = "بازکردنپنجرهجدیدToolStripMenuItem";
-            بازکردنپنجرهجدیدToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.Shift | Keys.N;
-            بازکردنپنجرهجدیدToolStripMenuItem.Size = new Size(305, 26);
-            بازکردنپنجرهجدیدToolStripMenuItem.Text = "باز کردن پنجره جدید";
+            tlsOpenNew.Image = Properties.Resources.icons8_new_window_64;
+            tlsOpenNew.Name = "tlsOpenNew";
+            tlsOpenNew.ShortcutKeys = Keys.Control | Keys.Shift | Keys.N;
+            tlsOpenNew.Size = new Size(305, 26);
+            tlsOpenNew.Text = "باز کردن پنجره جدید";
+            tlsOpenNew.Click += tlsOpenNew_Click;
             // 
             // toolStripSeparator1
             // 
@@ -563,7 +564,7 @@
         private ToolStripMenuItem فایلToolStripMenuItem;
         private ToolStripMenuItem tsmNewNote;
         private ToolStripMenuItem tlmOpen;
-        private ToolStripMenuItem بازکردنپنجرهجدیدToolStripMenuItem;
+        private ToolStripMenuItem tlsOpenNew;
         private ToolStripSeparator toolStripSeparator1;
         private ToolStripMenuItem ذخیرهToolStripMenuItem;
         private ToolStripMenuItem ذخیرهدرToolStripMenuItem;
