@@ -81,11 +81,13 @@
             tlsStatusBar = new ToolStripMenuItem();
             tlsToolBox = new ToolStripMenuItem();
             راهنماToolStripMenuItem = new ToolStripMenuItem();
-            راهنمایاستفادهازبرنامهToolStripMenuItem = new ToolStripMenuItem();
-            دربارهماToolStripMenuItem = new ToolStripMenuItem();
+            mnuhelp = new ToolStripMenuItem();
+            mnuMe = new ToolStripMenuItem();
             saveFileDialog1 = new SaveFileDialog();
             openFileDialog1 = new OpenFileDialog();
             fontDialog1 = new FontDialog();
+            printDialog1 = new PrintDialog();
+            printDocument1 = new System.Drawing.Printing.PrintDocument();
             pall.SuspendLayout();
             pfil.SuspendLayout();
             pbut.SuspendLayout();
@@ -359,6 +361,7 @@
             tlsP.ShortcutKeys = Keys.Control | Keys.P;
             tlsP.Size = new Size(305, 26);
             tlsP.Text = "چاپ";
+            tlsP.Click += tlsP_Click;
             // 
             // toolStripSeparator3
             // 
@@ -437,6 +440,7 @@
             mnuSearch.ShortcutKeys = Keys.Control | Keys.F;
             mnuSearch.Size = new Size(244, 26);
             mnuSearch.Text = "جستوجو";
+            mnuSearch.Click += mnuSearch_Click;
             // 
             // چایگزینیToolStripMenuItem
             // 
@@ -512,24 +516,24 @@
             // 
             // راهنماToolStripMenuItem
             // 
-            راهنماToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { راهنمایاستفادهازبرنامهToolStripMenuItem, دربارهماToolStripMenuItem });
+            راهنماToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { mnuhelp, mnuMe });
             راهنماToolStripMenuItem.Name = "راهنماToolStripMenuItem";
             راهنماToolStripMenuItem.Size = new Size(60, 24);
             راهنماToolStripMenuItem.Text = "راهنما";
             // 
-            // راهنمایاستفادهازبرنامهToolStripMenuItem
+            // mnuhelp
             // 
-            راهنمایاستفادهازبرنامهToolStripMenuItem.Image = Properties.Resources.icons8_guide_64;
-            راهنمایاستفادهازبرنامهToolStripMenuItem.Name = "راهنمایاستفادهازبرنامهToolStripMenuItem";
-            راهنمایاستفادهازبرنامهToolStripMenuItem.Size = new Size(248, 26);
-            راهنمایاستفادهازبرنامهToolStripMenuItem.Text = "راهنمای استفاده از برنامه";
+            mnuhelp.Image = Properties.Resources.icons8_guide_64;
+            mnuhelp.Name = "mnuhelp";
+            mnuhelp.Size = new Size(248, 26);
+            mnuhelp.Text = "راهنمای استفاده از برنامه";
             // 
-            // دربارهماToolStripMenuItem
+            // mnuMe
             // 
-            دربارهماToolStripMenuItem.Image = Properties.Resources.icons8_call_me_skin_type_1_100;
-            دربارهماToolStripMenuItem.Name = "دربارهماToolStripMenuItem";
-            دربارهماToolStripMenuItem.Size = new Size(248, 26);
-            دربارهماToolStripMenuItem.Text = "درباره ما";
+            mnuMe.Image = Properties.Resources.icons8_call_me_skin_type_1_100;
+            mnuMe.Name = "mnuMe";
+            mnuMe.Size = new Size(248, 26);
+            mnuMe.Text = "درباره ما";
             // 
             // saveFileDialog1
             // 
@@ -541,6 +545,14 @@
             // 
             openFileDialog1.FileName = "openFileDialog1";
             openFileDialog1.Title = "باز کردن متن";
+            // 
+            // printDialog1
+            // 
+            printDialog1.UseEXDialog = true;
+            // 
+            // printDocument1
+            // 
+            printDocument1.PrintPage += printDocument1_PrintPage;
             // 
             // Form1
             // 
@@ -613,8 +625,8 @@
         private ToolStripMenuItem tlsStatusBar;
         private ToolStripMenuItem tlsToolBox;
         private ToolStripMenuItem راهنماToolStripMenuItem;
-        private ToolStripMenuItem راهنمایاستفادهازبرنامهToolStripMenuItem;
-        private ToolStripMenuItem دربارهماToolStripMenuItem;
+        private ToolStripMenuItem mnuhelp;
+        private ToolStripMenuItem mnuMe;
         private ToolStripStatusLabel lblchar;
         private ToolStripStatusLabel toolStripStatusLabel2;
         private ToolStripStatusLabel lblword;
@@ -627,10 +639,12 @@
         private ToolStripComboBox toolStripComboBox1;
         private ToolStripSeparator toolStripSeparator8;
         private ToolStripButton tlsPrint;
-        private RichTextBox richText;
         private SaveFileDialog saveFileDialog1;
         private OpenFileDialog openFileDialog1;
         private FontDialog fontDialog1;
         private ToolStripMenuItem mnuDelete;
+        private PrintDialog printDialog1;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        public RichTextBox richText;
     }
 }

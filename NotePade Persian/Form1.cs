@@ -215,5 +215,26 @@ namespace NotePade_Persian
         {
             richText.Text += $"{DateTime.Now.ToShortDateString()}   {DateTime.Now.ToShortTimeString()}";
         }
+
+        private void tlsP_Click(object sender, EventArgs e)
+        {
+            printDialog1.Document = printDocument1;
+
+            if (printDialog1.ShowDialog() == DialogResult.OK)
+            {
+                printDocument1.Print();
+            }
+        }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+
+        }
+
+        private void mnuSearch_Click(object sender, EventArgs e)
+        {
+            frmSearch search = new frmSearch(this);
+            search.ShowDialog();
+        }
     }
 }
