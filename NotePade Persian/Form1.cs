@@ -242,5 +242,17 @@ namespace NotePade_Persian
             frmSearch search = new frmSearch(this);
             search.ShowDialog();
         }
+
+        private void mnuhelp_Click(object sender, EventArgs e)
+        {
+            frmHelp nfrmHelp = new frmHelp();
+            nfrmHelp.ShowDialog();
+        }
+
+        private void mnuMe_Click(object sender, EventArgs e)
+        {
+            frmMe nfrmMe = new frmMe();
+            nfrmMe.ShowDialog();
+        }
     }
 }

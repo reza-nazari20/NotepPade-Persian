@@ -17,3 +17,5 @@ E:\Practice\NotePade Persian\NotepPade-Persian\NotePade Persian\obj\Debug\net8.0
 E:\Practice\NotePade Persian\NotepPade-Persian\NotePade Persian\obj\Debug\net8.0-windows7.0\NotePade Persian.genruntimeconfig.cache
 E:\Practice\NotePade Persian\NotepPade-Persian\NotePade Persian\obj\Debug\net8.0-windows7.0\ref\NotePade Persian.dll
 E:\Practice\NotePade Persian\NotepPade-Persian\NotePade Persian\obj\Debug\net8.0-windows7.0\NotePade_Persian.frmSearch.resources
+E:\Practice\NotePade Persian\NotepPade-Persian\NotePade Persian\obj\Debug\net8.0-windows7.0\NotePade_Persian.frmHelp.resources
+E:\Practice\NotePade Persian\NotepPade-Persian\NotePade Persian\obj\Debug\net8.0-windows7.0\NotePade_Persian.frmMe.resources

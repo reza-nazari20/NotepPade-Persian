@@ -528,6 +528,7 @@
             mnuhelp.Name = "mnuhelp";
             mnuhelp.Size = new Size(248, 26);
             mnuhelp.Text = "راهنمای استفاده از برنامه";
+            mnuhelp.Click += mnuhelp_Click;
             // 
             // mnuMe
             // 
@@ -535,6 +536,7 @@
             mnuMe.Name = "mnuMe";
             mnuMe.Size = new Size(248, 26);
             mnuMe.Text = "درباره ما";
+            mnuMe.Click += mnuMe_Click;
             // 
             // saveFileDialog1
             // 

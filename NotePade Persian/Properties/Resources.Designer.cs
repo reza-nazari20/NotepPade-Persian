@@ -63,9 +63,49 @@ namespace NotePade_Persian.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_call_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-call-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_call_481 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-call-481", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_call_96 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-call-96", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_call_me_skin_type_1_100 {
             get {
                 object obj = ResourceManager.GetObject("icons8-call-me-skin-type-1-100", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_call_me_skin_type_1_1001 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-call-me-skin-type-1-1001", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -256,6 +296,26 @@ namespace NotePade_Persian.Properties {
         internal static System.Drawing.Bitmap icons8_user_80 {
             get {
                 object obj = ResourceManager.GetObject("icons8-user-80", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap me {
+            get {
+                object obj = ResourceManager.GetObject("me", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap meEdit {
+            get {
+                object obj = ResourceManager.GetObject("meEdit", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
