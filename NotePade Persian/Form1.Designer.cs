@@ -458,6 +458,7 @@
             انتخابهمهمتنToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.A;
             انتخابهمهمتنToolStripMenuItem.Size = new Size(244, 26);
             انتخابهمهمتنToolStripMenuItem.Text = "انتخاب همه متن";
+            انتخابهمهمتنToolStripMenuItem.Click += انتخابهمهمتنToolStripMenuItem_Click;
             // 
             // درجتاریخToolStripMenuItem
             // 
@@ -466,6 +467,7 @@
             درجتاریخToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.Shift | Keys.T;
             درجتاریخToolStripMenuItem.Size = new Size(244, 26);
             درجتاریخToolStripMenuItem.Text = "درج تاریخ";
+            درجتاریخToolStripMenuItem.Click += درجتاریخToolStripMenuItem_Click;
             // 
             // قالببندیToolStripMenuItem
             // 

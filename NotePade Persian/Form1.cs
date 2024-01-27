@@ -205,5 +205,15 @@ namespace NotePade_Persian
                 richText.Text = richText.Text.Replace(richText.Text, "");
             }
         }
+
+        private void انتخابهمهمتنToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richText.SelectAll();
+        }
+
+        private void درجتاریخToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richText.Text += $"{DateTime.Now.ToShortDateString()}   {DateTime.Now.ToShortTimeString()}";
+        }
     }
 }
