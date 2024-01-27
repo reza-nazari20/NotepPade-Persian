@@ -159,5 +159,51 @@ namespace NotePade_Persian
             tlsToolBox.Checked = !tlsToolBox.Checked;
             toolStrip1.Visible = !toolStrip1.Visible;
         }
+
+        private void mnuCopy_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(richText.SelectedText))
+            {
+                Clipboard.SetText(richText.SelectedText);
+            }
+            else
+            {
+                Clipboard.SetText(richText.Text);
+            }
+        }
+
+        private void mnuPaste_Click(object sender, EventArgs e)
+        {
+            if (Clipboard.ContainsText())
+            {
+                richText.Text += Clipboard.GetText(TextDataFormat.UnicodeText).ToString();
+            }
+        }
+
+        private void mnuCut_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(richText.SelectedText))
+            {
+                Clipboard.SetText(richText.SelectedText);
+                richText.Text = richText.Text.Replace(richText.SelectedText, "");
+            }
+            else
+            {
+                Clipboard.SetText(richText.Text);
+                richText.Text = richText.Text.Replace(richText.Text, "");
+            }
+        }
+
+        private void mnuDelete_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(richText.SelectedText))
+            {
+                richText.Text = richText.Text.Replace(richText.SelectedText, "");
+            }
+            else
+            {
+                richText.Text = richText.Text.Replace(richText.Text, "");
+            }
+        }
     }
 }

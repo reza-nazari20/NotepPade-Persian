@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCopyrightAttribute("ساخته شده توسط رضا نظری")]
 [assembly: System.Reflection.AssemblyDescriptionAttribute("دفترچه یادداشت فارسی")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2263698240a568384daf7fef1affd2dcf6066798")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ae3fc9ea1bf146d15c2e03aa8ef735d4693d9850")]
 [assembly: System.Reflection.AssemblyProductAttribute("NotePade Persian")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NotePade Persian")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0")]
