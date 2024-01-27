@@ -15,6 +15,11 @@
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
+            Search();
+        }
+
+        private void Search()
+        {
             string SearchKey = txtSearch.Text;
 
             nform.richText.SelectionBackColor = nform.richText.BackColor;
@@ -58,6 +63,7 @@
             }
             ShowResultWithSelected(rdbDown.Checked);
         }
+
         private void ShowResultWithSelected(bool IsDown)
         {
             try
@@ -83,7 +89,7 @@
                     searchresults = new List<Searchresult>();
                 }
             }
-            catch (Exception )
+            catch (Exception)
             {
                 if (IsDown == true)
                 {
@@ -99,12 +105,40 @@
                 nform.richText.SelectionStart = selected.SelectionStart;
                 nform.richText.SelectionLength = selected.SelectionLength;
                 nform.richText.SelectionBackColor = Color.SkyBlue;
-            }  
+            }
         }
 
         private void frmSearch_FormClosing(object sender, FormClosingEventArgs e)
         {
             nform.richText.SelectionBackColor = nform.richText.BackColor;
+        }
+
+        private void btnReplace_Click(object sender, EventArgs e)
+        {
+            Search();
+
+            if (!string.IsNullOrEmpty(nform.richText.SelectedText))
+            {
+                nform.richText.SelectionBackColor = nform.richText.BackColor;
+                nform.richText.SelectedText = nform.richText.SelectedText.Replace(nform.richText.SelectedText, txtReplace.Text);
+            }
+        }
+
+        private void btnReplaceAll_Click(object sender, EventArgs e)
+        {
+            Search();
+
+            if (!string.IsNullOrEmpty(nform.richText.SelectedText))
+            {
+                nform.richText.SelectionBackColor = nform.richText.BackColor;
+                nform.richText.Text = nform.richText.Text.Replace(nform.richText.SelectedText, txtReplace.Text);
+            }
+
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
     public class Searchresult

@@ -449,6 +449,7 @@
             چایگزینیToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.H;
             چایگزینیToolStripMenuItem.Size = new Size(244, 26);
             چایگزینیToolStripMenuItem.Text = "جایگزینی";
+            چایگزینیToolStripMenuItem.Click += چایگزینیToolStripMenuItem_Click;
             // 
             // toolStripSeparator5
             // 

@@ -39,6 +39,10 @@
             groupBox2 = new GroupBox();
             rdbDown = new RadioButton();
             rdbTop = new RadioButton();
+            btnReplace = new Button();
+            btnReplaceAll = new Button();
+            label2 = new Label();
+            txtReplace = new TextBox();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             SuspendLayout();
@@ -63,11 +67,11 @@
             // 
             // btnSearch
             // 
-            btnSearch.BackColor = Color.Lime;
-            btnSearch.Location = new Point(500, 11);
+            btnSearch.BackColor = Color.SkyBlue;
+            btnSearch.Location = new Point(483, 11);
             btnSearch.Margin = new Padding(2);
             btnSearch.Name = "btnSearch";
-            btnSearch.Size = new Size(91, 48);
+            btnSearch.Size = new Size(108, 48);
             btnSearch.TabIndex = 2;
             btnSearch.Text = "جستوجو";
             btnSearch.UseVisualStyleBackColor = false;
@@ -76,19 +80,20 @@
             // btnCancel
             // 
             btnCancel.BackColor = Color.Red;
-            btnCancel.Location = new Point(500, 74);
+            btnCancel.Location = new Point(483, 184);
             btnCancel.Margin = new Padding(2);
             btnCancel.Name = "btnCancel";
-            btnCancel.Size = new Size(91, 48);
+            btnCancel.Size = new Size(108, 48);
             btnCancel.TabIndex = 3;
             btnCancel.Text = "لغو";
             btnCancel.UseVisualStyleBackColor = false;
+            btnCancel.Click += btnCancel_Click;
             // 
             // groupBox1
             // 
             groupBox1.Controls.Add(rdbCom);
             groupBox1.Controls.Add(rdbJust);
-            groupBox1.Location = new Point(29, 156);
+            groupBox1.Location = new Point(28, 284);
             groupBox1.Margin = new Padding(2);
             groupBox1.Name = "groupBox1";
             groupBox1.Padding = new Padding(2);
@@ -104,13 +109,13 @@
             rdbCom.Name = "rdbCom";
             rdbCom.Size = new Size(154, 38);
             rdbCom.TabIndex = 1;
-            rdbCom.TabStop = true;
             rdbCom.Text = "شامل این کلمه باشد";
             rdbCom.UseVisualStyleBackColor = true;
             // 
             // rdbJust
             // 
             rdbJust.AutoSize = true;
+            rdbJust.Checked = true;
             rdbJust.Location = new Point(40, 39);
             rdbJust.Name = "rdbJust";
             rdbJust.Size = new Size(129, 38);
@@ -123,7 +128,7 @@
             // 
             groupBox2.Controls.Add(rdbDown);
             groupBox2.Controls.Add(rdbTop);
-            groupBox2.Location = new Point(352, 156);
+            groupBox2.Location = new Point(353, 284);
             groupBox2.Name = "groupBox2";
             groupBox2.Size = new Size(250, 128);
             groupBox2.TabIndex = 5;
@@ -133,6 +138,7 @@
             // rdbDown
             // 
             rdbDown.AutoSize = true;
+            rdbDown.Checked = true;
             rdbDown.Location = new Point(59, 83);
             rdbDown.Name = "rdbDown";
             rdbDown.Size = new Size(79, 38);
@@ -148,15 +154,60 @@
             rdbTop.Name = "rdbTop";
             rdbTop.Size = new Size(68, 38);
             rdbTop.TabIndex = 0;
-            rdbTop.TabStop = true;
             rdbTop.Text = "به بالا";
             rdbTop.UseVisualStyleBackColor = true;
+            // 
+            // btnReplace
+            // 
+            btnReplace.BackColor = Color.SkyBlue;
+            btnReplace.Location = new Point(483, 74);
+            btnReplace.Margin = new Padding(2);
+            btnReplace.Name = "btnReplace";
+            btnReplace.Size = new Size(108, 48);
+            btnReplace.TabIndex = 6;
+            btnReplace.Text = "جایگزینی";
+            btnReplace.UseVisualStyleBackColor = false;
+            btnReplace.Click += btnReplace_Click;
+            // 
+            // btnReplaceAll
+            // 
+            btnReplaceAll.BackColor = Color.SkyBlue;
+            btnReplaceAll.Location = new Point(483, 132);
+            btnReplaceAll.Margin = new Padding(2);
+            btnReplaceAll.Name = "btnReplaceAll";
+            btnReplaceAll.Size = new Size(108, 48);
+            btnReplaceAll.TabIndex = 7;
+            btnReplaceAll.Text = "جایگزینی همه";
+            btnReplaceAll.UseVisualStyleBackColor = false;
+            btnReplaceAll.Click += btnReplaceAll_Click;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(11, 103);
+            label2.Margin = new Padding(2, 0, 2, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(77, 34);
+            label2.TabIndex = 8;
+            label2.Text = "جایگزین :";
+            // 
+            // txtReplace
+            // 
+            txtReplace.Location = new Point(89, 100);
+            txtReplace.Margin = new Padding(2);
+            txtReplace.Name = "txtReplace";
+            txtReplace.Size = new Size(328, 41);
+            txtReplace.TabIndex = 9;
             // 
             // frmSearch
             // 
             AutoScaleDimensions = new SizeF(12F, 34F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(630, 314);
+            ClientSize = new Size(630, 423);
+            Controls.Add(txtReplace);
+            Controls.Add(label2);
+            Controls.Add(btnReplaceAll);
+            Controls.Add(btnReplace);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             Controls.Add(btnCancel);
@@ -193,5 +244,9 @@
         private GroupBox groupBox2;
         private RadioButton rdbDown;
         private RadioButton rdbTop;
+        private Button btnReplace;
+        private Button btnReplaceAll;
+        private Label label2;
+        private TextBox txtReplace;
     }
 }

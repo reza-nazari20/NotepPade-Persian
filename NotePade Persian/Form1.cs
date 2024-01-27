@@ -236,5 +236,11 @@ namespace NotePade_Persian
             frmSearch search = new frmSearch(this);
             search.ShowDialog();
         }
+
+        private void چایگزینیToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmSearch search = new frmSearch(this);
+            search.ShowDialog();
+        }
     }
 }
